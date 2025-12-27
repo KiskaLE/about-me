@@ -41,5 +41,18 @@ A high-end, dark-mode personal portfolio website with a minimalist pixelated aes
    npm run dev
    ```
 
+### Docker
+Alternatively, you can run the project using Docker:
+
+1. Build the Docker image:
+   ```bash
+   docker build -t vkylar-portfolio .
+   ```
+2. Run the container:
+   ```bash
+   docker run -d -p 8080:80 --name vkylar-portfolio vkylar-portfolio
+   ```
+3. Access the site at `http://localhost:8080`
+
 ## License
 © 2025 VKYLAR.COM / ALL RIGHTS RESERVED
