@@ -81,12 +81,18 @@ function PortfolioContent() {
   );
 }
 
+function LanguageRedirect() {
+  const browserLang = navigator.language || navigator.userLanguage;
+  const defaultLang = browserLang.startsWith('cs') ? 'cs' : 'en';
+  return <Navigate to={`/${defaultLang}`} replace />;
+}
+
 function App() {
   return (
     <Routes>
       <Route path="/:lang" element={<PortfolioContent />} />
-      <Route path="/" element={<Navigate to="/en" replace />} />
-      <Route path="*" element={<Navigate to="/en" replace />} />
+      <Route path="/" element={<LanguageRedirect />} />
+      <Route path="*" element={<LanguageRedirect />} />
     </Routes>
   );
 }
