@@ -5,6 +5,7 @@ import { CustomCursor } from './components/CustomCursor';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Work } from './components/Work';
+import { Education } from './components/Education';
 import { Connect } from './components/Connect';
 import { Footer } from './components/Footer';
 import './index.css';
@@ -18,7 +19,7 @@ function PortfolioContent() {
   const t = translations[currentLang];
 
   useEffect(() => {
-    const sections = ['about', 'work', 'connect'];
+    const sections = ['about', 'work', 'education', 'connect'];
 
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -36,8 +37,6 @@ function PortfolioContent() {
         const el = document.getElementById(id);
         if (el) {
           const rect = el.getBoundingClientRect();
-          // If the top of the section is in the top 40% of the viewport
-          // or if the section is currently covering the top 40%
           if (rect.top <= windowHeight * 0.4 && rect.bottom >= windowHeight * 0.4) {
             setActiveSection(id);
             break;
@@ -47,7 +46,6 @@ function PortfolioContent() {
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    // Initial check with a small timeout to ensure DOM is ready
     const timer = setTimeout(handleScroll, 100);
 
     return () => {
@@ -74,6 +72,7 @@ function PortfolioContent() {
       <main className="max-w-[1000px] mx-auto px-8 pt-32 pb-16">
         <Hero t={t} />
         <Work t={t} />
+        <Education t={t} />
         <Connect t={t} />
       </main>
 

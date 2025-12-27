@@ -3,6 +3,7 @@ export const translations = {
         nav: {
             about: "About",
             work: "Work",
+            education: "Education",
             connect: "Connect"
         },
         hero: {
@@ -33,6 +34,23 @@ export const translations = {
                 }
             ]
         },
+        education: {
+            title: "Education",
+            items: [
+                {
+                    degree: "Master of Digital Arts",
+                    school: "Pixel University",
+                    period: "2016 - 2018",
+                    desc: "Advanced studies in visual harmony and digital architecture."
+                },
+                {
+                    degree: "Bachelor of Computer Science",
+                    school: "Tech Institute",
+                    period: "2012 - 2016",
+                    desc: "Foundational engineering and software development principles."
+                }
+            ]
+        },
         connect: {
             title: "Connect",
             links: [
@@ -47,6 +65,7 @@ export const translations = {
         nav: {
             about: "O mně",
             work: "Práce",
+            education: "Vzdělání",
             connect: "Kontakt"
         },
         hero: {
@@ -74,6 +93,23 @@ export const translations = {
                     company: "Creative Labs",
                     period: "2018 - 2020",
                     desc: "Specializace na mikro-interakce a pixelově dokonalá rozhraní."
+                }
+            ]
+        },
+        education: {
+            title: "Vzdělání",
+            items: [
+                {
+                    degree: "Inženýr digitálních umění",
+                    school: "Pixelová Univerzita",
+                    period: "2016 - 2018",
+                    desc: "Pokročilé studium vizuální harmonie a digitální architektury."
+                },
+                {
+                    degree: "Bakalář informatiky",
+                    school: "Technický Institut",
+                    period: "2012 - 2016",
+                    desc: "Základy inženýrství a principy vývoje softwaru."
                 }
             ]
         },

@@ -6,6 +6,7 @@ export const Navbar = ({ t, currentLang, toggleLang, activeSection }) => {
     const navItems = [
         { id: 'about', label: t.nav.about },
         { id: 'work', label: t.nav.work },
+        { id: 'education', label: t.nav.education },
         { id: 'connect', label: t.nav.connect },
     ];
 
@@ -13,7 +14,6 @@ export const Navbar = ({ t, currentLang, toggleLang, activeSection }) => {
         if (id === 'about') {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
-            // Update hash without jumping
             window.history.pushState(null, '', '#about');
         }
     };
