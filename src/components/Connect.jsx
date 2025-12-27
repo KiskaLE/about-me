@@ -22,6 +22,8 @@ export const Connect = ({ t }) => {
                     <motion.a
                         key={i}
                         href={link.url}
+                        target={link.url.startsWith('mailto:') ? undefined : '_blank'}
+                        rel={link.url.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
