@@ -20,14 +20,17 @@
     @apply bg-brand-bg text-white font-body leading-relaxed overflow-x-hidden antialiased;
   }
 
-  body,
-  a,
-  button,
-  [role="button"],
-  input,
-  select,
-  textarea {
-    cursor: none !important;
+  @media (pointer: fine) {
+
+    body,
+    a,
+    button,
+    [role="button"],
+    input,
+    select,
+    textarea {
+      cursor: none !important;
+    }
   }
 
   /* Account for fixed navbar when scrolling to sections */
@@ -63,6 +66,13 @@
   .cursor-pixel {
     @apply w-5 h-5 border-2 border-brand-accent fixed top-0 left-0 pointer-events-none z-[9999] mix-blend-difference;
     will-change: transform;
+    display: none;
+  }
+
+  @media (pointer: fine) {
+    .cursor-pixel {
+      display: block;
+    }
   }
 
   .progressive-blur {
