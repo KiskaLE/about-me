@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Routes, Route, useParams, useNavigate, Navigate } from 'react-router-dom';
 import { translations } from './translations';
 import { CustomCursor } from './components/CustomCursor';
@@ -12,9 +12,49 @@ import './index.css';
 function PortfolioContent() {
   const { lang } = useParams();
   const navigate = useNavigate();
+  const [activeSection, setActiveSection] = useState('about');
 
   const currentLang = translations[lang] ? lang : 'en';
   const t = translations[currentLang];
+
+  useEffect(() => {
+    const sections = ['about', 'work', 'connect'];
+
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+
+      // Check if we are at the bottom of the page
+      if (scrollPosition + windowHeight >= documentHeight - 100) {
+        setActiveSection('connect');
+        return;
+      }
+
+      // Otherwise, find the section that occupies the top part of the viewport
+      for (const id of sections) {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          // If the top of the section is in the top 40% of the viewport
+          // or if the section is currently covering the top 40%
+          if (rect.top <= windowHeight * 0.4 && rect.bottom >= windowHeight * 0.4) {
+            setActiveSection(id);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    // Initial check with a small timeout to ensure DOM is ready
+    const timer = setTimeout(handleScroll, 100);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(timer);
+    };
+  }, []);
 
   const toggleLang = () => {
     const nextLang = currentLang === 'en' ? 'cs' : 'en';
@@ -29,7 +69,7 @@ function PortfolioContent() {
     <div className="min-h-screen bg-[radial-gradient(circle_at_50%_50%,#111111_0%,#080808_100%)]">
       <CustomCursor />
 
-      <Navbar t={t} currentLang={currentLang} toggleLang={toggleLang} />
+      <Navbar t={t} currentLang={currentLang} toggleLang={toggleLang} activeSection={activeSection} />
 
       <main className="max-w-[1000px] mx-auto px-8 pt-32 pb-16">
         <Hero t={t} />

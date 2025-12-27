@@ -12,8 +12,17 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-brand-bg text-white font-body leading-relaxed overflow-x-hidden cursor-none antialiased;
+  }
+
+  /* Account for fixed navbar when scrolling to sections */
+  section {
+    scroll-margin-top: 120px;
   }
 
   h1,
