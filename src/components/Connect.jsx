@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, ArrowRight } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone, ArrowRight } from 'lucide-react';
 
 export const Connect = ({ t }) => {
     const getIcon = (name) => {
@@ -8,9 +8,13 @@ export const Connect = ({ t }) => {
             case 'GitHub': return <Github size={20} />;
             case 'LinkedIn': return <Linkedin size={20} />;
             case 'Email': return <Mail size={20} />;
+            case 'Phone':
+            case 'Telefon': return <Phone size={20} />;
             default: return null;
         }
     };
+
+    const isExternal = (url) => !url.startsWith('mailto:') && !url.startsWith('tel:');
 
     return (
         <section id="connect">
@@ -22,8 +26,8 @@ export const Connect = ({ t }) => {
                     <motion.a
                         key={i}
                         href={link.url}
-                        target={link.url.startsWith('mailto:') ? undefined : '_blank'}
-                        rel={link.url.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
+                        target={isExternal(link.url) ? '_blank' : undefined}
+                        rel={isExternal(link.url) ? 'noopener noreferrer' : undefined}
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}

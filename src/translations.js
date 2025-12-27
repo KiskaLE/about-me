@@ -7,30 +7,30 @@ export const translations = {
             connect: "Connect"
         },
         hero: {
-            title: "Digital",
-            accent: "Artisan",
-            bio: "Building high-end digital experiences where minimalism meets pixel perfection. Based in the heart of Europe, crafting code that feels like art."
+            title: "Systems",
+            accent: "Professional",
+            bio: "IT professional from Letohrad focused on systems administration and infrastructure management. I enjoy programming with Next.js and Go in my free time."
         },
         experience: {
             title: "History",
             items: [
                 {
-                    role: "Senior Pixel Architect",
-                    company: "Future Systems",
-                    period: "2023 - Present",
-                    desc: "Designing high-fidelity digital experiences with minimalist precision."
+                    role: "IT | IT helpdesk",
+                    company: "USSPA, s.r.o.",
+                    period: "2024 - Present",
+                    desc: "Managing IT infrastructure (Intune, M365, SAP, ADDS, VM, Docker). Responsibilities include technical support, asset management, and hardware deployment."
                 },
                 {
-                    role: "Fullstack Developer",
-                    company: "Digital Horizons",
-                    period: "2020 - 2023",
-                    desc: "Crafting scalable web applications with a focus on luxury performance."
+                    role: "PHP Programmer (Internship)",
+                    company: "SecurityNet s. r. o.",
+                    period: "09/2023 - 01/2024",
+                    desc: "Full-time internship focused on Nette Framework, MySQL, and developing reservation systems."
                 },
                 {
-                    role: "UI Engineer",
-                    company: "Creative Labs",
-                    period: "2018 - 2020",
-                    desc: "Specialized in micro-interactions and pixel-perfect interfaces."
+                    role: "Electrician",
+                    company: "CZ LOKO",
+                    period: "2020 - 2021",
+                    desc: "Technical work focused on precision and detail in the production of rolling stock."
                 }
             ]
         },
@@ -38,16 +38,16 @@ export const translations = {
             title: "Education",
             items: [
                 {
-                    degree: "Master of Digital Arts",
-                    school: "Pixel University",
-                    period: "2016 - 2018",
-                    desc: "Advanced studies in visual harmony and digital architecture."
+                    degree: "Associate's Degree (DiS.) in IT",
+                    school: "SPSE a VOŠ Pardubice",
+                    period: "2021 - 2024",
+                    desc: "Specialized in computing, systems architecture, and software principles. Graduated with honors."
                 },
                 {
-                    degree: "Bachelor of Computer Science",
-                    school: "Tech Institute",
-                    period: "2012 - 2016",
-                    desc: "Foundational engineering and software development principles."
+                    degree: "Mechanic Electrician (Matura)",
+                    school: "VOŠ a SŠ technická, Česká Třebová",
+                    period: "2016 - 2020",
+                    desc: "Technical education focused on complex electronic systems and engineering."
                 }
             ]
         },
@@ -69,30 +69,30 @@ export const translations = {
             connect: "Kontakt"
         },
         hero: {
-            title: "Digitální",
-            accent: "Artisan",
-            bio: "Tvorba špičkových digitálních zážitků, kde se minimalismus potkává s pixelovou dokonalostí. Sídlím v srdci Evropy a tvořím kód, který působí jako umění."
+            title: "IT",
+            accent: "Professional",
+            bio: "IT profesionál z Letohradu se zaměřením na správu systémů a infrastruktury. Programování v Next.js a Go se věnuji ve svém volném čase."
         },
         experience: {
             title: "Historie",
             items: [
                 {
-                    role: "Senior Pixel Architekt",
-                    company: "Future Systems",
-                    period: "2023 - Současnost",
-                    desc: "Navrhování vysoce kvalitních digitálních zážitků s minimalistickou precizností."
+                    role: "IT | IT helpdesk",
+                    company: "USSPA, s.r.o.",
+                    period: "2024 - Současnost",
+                    desc: "Správa IT infrastruktury (Intune, M365, SAP, ADDS, VM, Docker). Moje práce zahrnuje technickou podporu, evidenci strojů a přípravu techniky."
                 },
                 {
-                    role: "Fullstack Vývojář",
-                    company: "Digital Horizons",
-                    period: "2020 - 2023",
-                    desc: "Tvorba škálovatelných webových aplikací se zaměřením na luxusní výkon."
+                    role: "Programátor PHP (Stáž)",
+                    company: "SecurityNet s. r. o.",
+                    period: "09/2023 - 01/2024",
+                    desc: "Půlroční stáž zaměřená na Nette Framework, MySQL a vývoj rezervačních systémů."
                 },
                 {
-                    role: "UI Inženýr",
-                    company: "Creative Labs",
-                    period: "2018 - 2020",
-                    desc: "Specializace na mikro-interakce a pixelově dokonalá rozhraní."
+                    role: "Elektrikář",
+                    company: "CZ LOKO",
+                    period: "2020 - 2021",
+                    desc: "Technická práce s důrazem na preciznost a detail při výrobě kolejových vozidel."
                 }
             ]
         },
@@ -100,16 +100,16 @@ export const translations = {
             title: "Vzdělání",
             items: [
                 {
-                    degree: "Inženýr digitálních umění",
-                    school: "Pixelová Univerzita",
-                    period: "2016 - 2018",
-                    desc: "Pokročilé studium vizuální harmonie a digitální architektury."
+                    degree: "Diplomovaný specialista (DiS.) v IT",
+                    school: "SPSE a VOŠ Pardubice",
+                    period: "2021 - 2024",
+                    desc: "Výpočetní technika, zakončeno absolutoriem. Zaměření na architekturu a vývoj softwaru."
                 },
                 {
-                    degree: "Bakalář informatiky",
-                    school: "Technický Institut",
-                    period: "2012 - 2016",
-                    desc: "Základy inženýrství a principy vývoje softwaru."
+                    degree: "Mechanik elektrotechnik (Maturita)",
+                    school: "VOŠ a SŠ technická, Česká Třebová",
+                    period: "2016 - 2020",
+                    desc: "Technické vzdělání zaměřené na elektronické systémy a inženýrství."
                 }
             ]
         },
