@@ -57,7 +57,7 @@ export const Navbar = ({ t, currentLang, toggleLang, activeSection }) => {
                             className="pixel-border bg-brand-card text-white flex items-center gap-2 px-3 py-2 cursor-none outline-none hover:border-brand-accent hover:text-brand-accent transition-all"
                         >
                             <Languages size={18} />
-                            <span className="pixel-text text-[0.7rem] font-bold">{currentLang.toUpperCase()}</span>
+                            <span className="text-[0.7rem] font-bold tracking-wider">{currentLang === 'cs' ? 'CZ' : 'EN'}</span>
                         </button>
                     </div>
                 </div>
