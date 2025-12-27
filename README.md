@@ -54,5 +54,18 @@ Alternatively, you can run the project using Docker:
    ```
 3. Access the site at `http://localhost:8080`
 
+### Docker Compose
+For an even easier setup, use Docker Compose:
+
+1. Start the service:
+   ```bash
+   docker compose up -d
+   ```
+2. The site will be available at `http://localhost:8080`.
+3. To stop the service:
+   ```bash
+   docker compose down
+   ```
+
 ## License
 © 2025 VKYLAR.COM / ALL RIGHTS RESERVED
