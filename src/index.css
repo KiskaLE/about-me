@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Silkscreen&display=swap');
+
+:root {
+  --bg-color: #080808;
+  --card-bg: #121212;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --accent-color: #00ffcc;
+  /* Neon cyan for pixel look */
+  --pixel-size: 4px;
+  --font-body: 'Inter', sans-serif;
+  --font-pixel: 'Silkscreen', cursive;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  cursor: none;
+  /* Hide real cursor */
+}
+
+.pixel-text {
+  font-family: var(--font-pixel);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.pixel-border {
+  position: relative;
+  border: 2px solid var(--text-primary);
+  box-shadow:
+    var(--pixel-size) 0 0 -2px var(--bg-color),
+    calc(-1 * var(--pixel-size)) 0 0 -2px var(--bg-color),
+    0 var(--pixel-size) 0 -2px var(--bg-color),
+    0 calc(-1 * var(--pixel-size)) 0 -2px var(--bg-color),
+    calc(2 * var(--pixel-size)) 0 0 -2px var(--text-primary),
+    calc(-2 * var(--pixel-size)) 0 0 -2px var(--text-primary),
+    0 calc(2 * var(--pixel-size)) 0 -2px var(--text-primary),
+    0 calc(-2 * var(--pixel-size)) 0 -2px var(--text-primary);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-pixel);
+  margin-bottom: 2rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cursor-pixel {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--accent-color);
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
