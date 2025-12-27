@@ -17,9 +17,37 @@
   font-weight: bold;
 }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
 .nav-links {
   display: flex;
   gap: 2rem;
+}
+
+.lang-toggle {
+  background: var(--card-bg);
+  border: none;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.lang-toggle span {
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.lang-toggle:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .nav-links a {

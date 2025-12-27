@@ -1,36 +1,12 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, ArrowRight, ExternalLink } from 'lucide-react';
+import { Github, Linkedin, Mail, ArrowRight, Languages } from 'lucide-react';
+import { translations } from './translations';
 import './App.css';
 
-const experiences = [
-  {
-    role: "Senior Pixel Architect",
-    company: "Future Systems",
-    period: "2023 - Present",
-    desc: "Designing high-fidelity digital experiences with minimalist precision."
-  },
-  {
-    role: "Fullstack Developer",
-    company: "Digital Horizons",
-    period: "2020 - 2023",
-    desc: "Crafting scalable web applications with a focus on luxury performance."
-  },
-  {
-    role: "UI Engineer",
-    company: "Creative Labs",
-    period: "2018 - 2020",
-    desc: "Specialized in micro-interactions and pixel-perfect interfaces."
-  }
-];
-
-const links = [
-  { name: "GitHub", icon: <Github size={20} />, url: "https://github.com" },
-  { name: "LinkedIn", icon: <Linkedin size={20} />, url: "https://linkedin.com" },
-  { name: "Email", icon: <Mail size={20} />, url: "mailto:hello@example.com" }
-];
-
 function App() {
+  const [lang, setLang] = useState('en');
+  const t = translations[lang];
   const cursorRef = useRef(null);
 
   useEffect(() => {
@@ -43,6 +19,19 @@ function App() {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
+  const toggleLang = () => {
+    setLang(prev => prev === 'en' ? 'cs' : 'en');
+  };
+
+  const getIcon = (name) => {
+    switch (name) {
+      case 'GitHub': return <Github size={20} />;
+      case 'LinkedIn': return <Linkedin size={20} />;
+      case 'Email': return <Mail size={20} />;
+      default: return null;
+    }
+  };
+
   return (
     <div className="portfolio">
       <div
@@ -52,10 +41,16 @@ function App() {
 
       <nav className="navbar">
         <div className="pixel-text logo">Vkylar</div>
-        <div className="nav-links">
-          <a href="#about" className="pixel-text">About</a>
-          <a href="#work" className="pixel-text">Work</a>
-          <a href="#connect" className="pixel-text">Connect</a>
+        <div className="nav-right">
+          <div className="nav-links">
+            <a href="#about" className="pixel-text">{t.nav.about}</a>
+            <a href="#work" className="pixel-text">{t.nav.work}</a>
+            <a href="#connect" className="pixel-text">{t.nav.connect}</a>
+          </div>
+          <button onClick={toggleLang} className="lang-toggle pixel-border">
+            <Languages size={18} />
+            <span className="pixel-text">{lang.toUpperCase()}</span>
+          </button>
         </div>
       </nav>
 
@@ -67,7 +62,7 @@ function App() {
             transition={{ duration: 0.8 }}
             className="pixel-text main-title"
           >
-            Digital <span className="accent">Artisan</span>
+            {t.hero.title} <span className="accent">{t.hero.accent}</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -75,14 +70,14 @@ function App() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="bio"
           >
-            Building high-end digital experiences where minimalism meets pixel perfection. Based in the heart of Europe, crafting code that feels like art.
+            {t.hero.bio}
           </motion.p>
         </section>
 
         <section id="work" className="experience-section">
-          <h2 className="pixel-text section-title">History</h2>
+          <h2 className="pixel-text section-title">{t.experience.title}</h2>
           <div className="experience-list">
-            {experiences.map((exp, i) => (
+            {t.experience.items.map((exp, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, x: -20 }}
@@ -102,16 +97,16 @@ function App() {
         </section>
 
         <section id="connect" className="links-section">
-          <h2 className="pixel-text section-title">Connect</h2>
+          <h2 className="pixel-text section-title">{t.connect.title}</h2>
           <div className="links-grid">
-            {links.map((link, i) => (
+            {t.connect.links.map((link, i) => (
               <motion.a
                 key={i}
                 href={link.url}
                 whileHover={{ scale: 1.05 }}
                 className="link-item pixel-border"
               >
-                {link.icon}
+                {getIcon(link.name)}
                 <span className="pixel-text">{link.name}</span>
                 <ArrowRight size={16} />
               </motion.a>
@@ -121,7 +116,7 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p className="pixel-text">© 2025 VKYLAR.COM / ALL RIGHTS RESERVED</p>
+        <p className="pixel-text">{t.footer}</p>
       </footer>
     </div>
   );
