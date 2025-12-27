@@ -22,6 +22,10 @@ export const Connect = ({ t }) => {
                     <motion.a
                         key={i}
                         href={link.url}
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: i * 0.1, duration: 0.5, ease: "easeOut" }}
                         whileHover={{ scale: 1.05 }}
                         className="link-item pixel-border flex items-center justify-between p-6 bg-brand-card peer cursor-none"
                     >

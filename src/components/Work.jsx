@@ -13,7 +13,8 @@ export const Work = ({ t }) => {
                         key={i}
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ delay: i * 0.2 }}
+                        viewport={{ once: true, margin: "-50px" }}
+                        transition={{ delay: i * 0.1, duration: 0.5, ease: "easeOut" }}
                         className="exp-card pixel-border p-8 bg-brand-card transition-transform hover:translate-x-[10px]"
                     >
                         <div className="mb-6">

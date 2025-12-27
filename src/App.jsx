@@ -31,7 +31,7 @@ function PortfolioContent() {
 
       <Navbar t={t} currentLang={currentLang} toggleLang={toggleLang} />
 
-      <main className="max-w-[1000px] mx-auto px-8 py-16">
+      <main className="max-w-[1000px] mx-auto px-8 pt-32 pb-16">
         <Hero t={t} />
         <Work t={t} />
         <Connect t={t} />

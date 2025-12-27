@@ -7,7 +7,8 @@ export const Hero = ({ t }) => {
             <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
                 className="pixel-text text-4xl md:text-6xl mb-6 leading-[1.1]"
             >
                 {t.hero.title} <span className="text-brand-accent">{t.hero.accent}</span>
@@ -15,7 +16,8 @@ export const Hero = ({ t }) => {
             <motion.p
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                transition={{ delay: 0.4, duration: 0.8 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
                 className="text-lg md:text-xl text-brand-text-secondary max-w-[600px] mx-auto font-light"
             >
                 {t.hero.bio}
