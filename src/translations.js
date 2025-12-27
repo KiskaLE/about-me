@@ -55,8 +55,8 @@ export const translations = {
             title: "Connect",
             links: [
                 { name: "GitHub", url: "https://github.com/KiskaLE" },
-                { name: "LinkedIn", url: "https://linkedin.com" },
-                { name: "Email", url: "mailto:hello@vkylar.com" }
+                { name: "LinkedIn", url: "https://www.linkedin.com/in/vojtech-kylar-b31346230" },
+                { name: "Email", url: "mailto:vojtech@vkylar.com" }
             ]
         },
         footer: "© 2025 VKYLAR.COM / ALL RIGHTS RESERVED"
@@ -117,8 +117,8 @@ export const translations = {
             title: "Kontakt",
             links: [
                 { name: "GitHub", url: "https://github.com/KiskaLE" },
-                { name: "LinkedIn", url: "https://linkedin.com" },
-                { name: "Email", url: "mailto:hello@vkylar.com" }
+                { name: "LinkedIn", url: "https://www.linkedin.com/in/vojtech-kylar-b31346230" },
+                { name: "Email", url: "mailto:vojtech@vkylar.com" }
             ]
         },
         footer: "© 2025 VKYLAR.COM / VŠECHNA PRÁVA VYHRAZENA"

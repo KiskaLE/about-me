@@ -27,7 +27,7 @@ export const Navbar = ({ t, currentLang, toggleLang, activeSection }) => {
                         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                         className="pixel-text text-2xl font-bold cursor-none"
                     >
-                        Vkylar
+                        Vojtech Kylar
                     </button>
                     <div className="flex items-center gap-8">
                         <div className="hidden md:flex gap-8">
