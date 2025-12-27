@@ -17,7 +17,17 @@
   }
 
   body {
-    @apply bg-brand-bg text-white font-body leading-relaxed overflow-x-hidden cursor-none antialiased;
+    @apply bg-brand-bg text-white font-body leading-relaxed overflow-x-hidden antialiased;
+  }
+
+  body,
+  a,
+  button,
+  [role="button"],
+  input,
+  select,
+  textarea {
+    cursor: none !important;
   }
 
   /* Account for fixed navbar when scrolling to sections */
