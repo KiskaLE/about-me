@@ -1,4 +1,5 @@
 # Vkylar Portfolio 🌌
+> This project was vibecoded.
 
 A high-end, dark-mode personal portfolio website with a minimalist pixelated aesthetic. Built with React, Vite, and Framer Motion.
 
