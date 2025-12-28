@@ -9,7 +9,7 @@ export const translations = {
         hero: {
             title: "Systems",
             accent: "Professional",
-            bio: "IT professional from Letohrad focused on systems administration and infrastructure management. I enjoy programming with Next.js and Go in my free time."
+            bio: "IT professional from Letohrad focused on systems administration and infrastructure management. I enjoy programming with Next.js and Go in my free time and I also self-host various services at home."
         },
         experience: {
             title: "History",
@@ -24,7 +24,7 @@ export const translations = {
                     role: "PHP Programmer (Internship)",
                     company: "SecurityNet s. r. o.",
                     period: "09/2023 - 01/2024",
-                    desc: "Full-time internship focused on Nette Framework, MySQL, and developing reservation systems."
+                    desc: "Full-time internship focused on Nette Framework, MySQL, and developing reservation system."
                 },
                 {
                     role: "Electrician",
@@ -71,7 +71,7 @@ export const translations = {
         hero: {
             title: "IT",
             accent: "Professional",
-            bio: "IT profesionál z Letohradu se zaměřením na správu systémů a infrastruktury. Programování v Next.js a Go se věnuji ve svém volném čase."
+            bio: "IT profesionál z Letohradu se zaměřením na správu systémů a infrastruktury. Programování v Next.js a Go se věnuji ve svém volném čase, stejně jako self-hostingu."
         },
         experience: {
             title: "Historie",
@@ -86,7 +86,7 @@ export const translations = {
                     role: "Programátor PHP (Stáž)",
                     company: "SecurityNet s. r. o.",
                     period: "09/2023 - 01/2024",
-                    desc: "Půlroční stáž zaměřená na Nette Framework, MySQL a vývoj rezervačních systémů."
+                    desc: "Půlroční stáž zaměřená na Nette Framework, MySQL a vývoj rezervačního systému."
                 },
                 {
                     role: "Elektrikář",
