@@ -70,7 +70,7 @@ export const translations = {
         },
         hero: {
             title: "IT",
-            accent: "Professional",
+            accent: "Profesional",
             bio: "IT profesionál z Letohradu se zaměřením na správu systémů a infrastruktury. Programování v Next.js a Go se věnuji ve svém volném čase, stejně jako self-hostingu."
         },
         experience: {
